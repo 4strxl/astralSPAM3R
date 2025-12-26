@@ -1,4 +1,4 @@
--- 4strxl spamrz | Background changed to white
+-- 4strxl spamrz | White hub + player buttons light purple + extra commands
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -9,13 +9,13 @@ repeat task.wait() until LocalPlayer and LocalPlayer:FindFirstChild("PlayerGui")
 
 -- CONFIG
 local TITLE_TEXT = "4strxl spamrz"
-local COMMANDS = {"rocket", "balloon", "inverse", "tiny"}
+local COMMANDS = {"rocket", "balloon", "inverse", "tiny", "Morph", "Jumpscare"}
 
 -- COLORS
 local PURPLE = Color3.fromRGB(190,160,255) -- light purple
 local PURPLE_DARK = Color3.fromRGB(160,130,220)
-local BG = Color3.fromRGB(255,255,255) -- changed hub background to white
-local BTN = Color3.fromRGB(40,40,52)
+local BG = Color3.fromRGB(255,255,255) -- hub background white
+local BTN = Color3.fromRGB(190,160,255) -- player button background light purple
 
 -- NOTIFY
 local function notify(t, d)
@@ -57,7 +57,7 @@ gui.Parent = LocalPlayer.PlayerGui
 local main = Instance.new("Frame", gui)
 main.Size = UDim2.fromOffset(300, 380)
 main.Position = UDim2.fromOffset(60, 120)
-main.BackgroundColor3 = BG -- white background
+main.BackgroundColor3 = BG
 main.BorderSizePixel = 0
 Instance.new("UICorner", main).CornerRadius = UDim.new(0, 14)
 
@@ -158,8 +158,8 @@ local function makeButton(plr)
     b.TextXAlignment = Enum.TextXAlignment.Left
     b.Font = Enum.Font.Gotham
     b.TextSize = 14
-    b.TextColor3 = Color3.fromRGB(240,240,240)
-    b.BackgroundColor3 = BTN
+    b.TextColor3 = Color3.fromRGB(20,20,20) -- readable on light purple
+    b.BackgroundColor3 = BTN -- light purple background
     b.BorderSizePixel = 0
     Instance.new("UICorner", b).CornerRadius = UDim.new(0,8)
 
