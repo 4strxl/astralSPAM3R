@@ -1,4 +1,4 @@
--- 4strxl spamrz | White hub + player buttons light purple + extra commands
+-- 4strxl spamrz | White hub + player buttons light purple + lowercase commands
 
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -9,7 +9,7 @@ repeat task.wait() until LocalPlayer and LocalPlayer:FindFirstChild("PlayerGui")
 
 -- CONFIG
 local TITLE_TEXT = "4strxl spamrz"
-local COMMANDS = {"rocket", "balloon", "inverse", "tiny", "Morph", "Jumpscare"}
+local COMMANDS = {"rocket", "balloon", "inverse", "tiny", "morph", "jumpscare"} -- lowercase commands
 
 -- COLORS
 local PURPLE = Color3.fromRGB(190,160,255) -- light purple
